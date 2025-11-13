@@ -81,7 +81,7 @@ export default function HomePage() {
       <footer className="border-t border-border mt-16">
         <div className="container mx-auto px-4 py-8">
           <p className="text-center text-sm text-muted-foreground">
-            © 2025 WILD MARKET. Built for students, by students.
+            © 2025 WILD MARKET. Built for CIT-U Students and Staffs, by WildGooners.
           </p>
         </div>
       </footer>
