@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
+import LoadingScreen from "@/components/loading-screen"
 
 export const metadata: Metadata = {
   title: "WILD MARKET - Campus Marketplace",
@@ -20,7 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
-        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        <LoadingScreen />
+        <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
     </html>
