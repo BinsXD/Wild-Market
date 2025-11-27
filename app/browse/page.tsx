@@ -239,7 +239,7 @@ export default function BrowsePage() {
                     <CardContent>
                       <div className="flex items-center justify-between">
                         <span className="text-xl font-bold text-primary">
-                          ${item.price}
+                          ₱{item.price}
                           {item.type === "rent" && <span className="text-sm font-normal">/day</span>}
                         </span>
                         <Badge variant="outline" className="capitalize">

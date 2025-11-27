@@ -140,7 +140,7 @@ export default function CreateListingPage() {
               {/* Price and Type */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="price">Price ($) *</Label>
+                  <Label htmlFor="price">Price (₱) *</Label>
                   <Input
                     id="price"
                     type="number"

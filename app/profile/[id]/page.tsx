@@ -502,7 +502,7 @@ export default function ProfilePage() {
                         </h3>
                         <div className="flex items-center justify-between mb-2">
                           <p className="text-xl font-bold text-primary">
-                            ${item.price}
+                            ₱{item.price}
                             {item.type === "rent" && <span className="text-sm font-normal text-muted-foreground">/day</span>}
                           </p>
                           <Badge variant="outline" className="capitalize text-xs">
@@ -571,7 +571,7 @@ export default function ProfilePage() {
                           </h3>
                           <div className="flex items-center justify-between mb-2">
                             <p className="text-xl font-bold text-primary">
-                              ${item.price}
+                              ₱{item.price}
                               {item.type === "rent" && <span className="text-sm font-normal text-muted-foreground">/day</span>}
                             </p>
                             <Badge variant="outline" className="capitalize text-xs">

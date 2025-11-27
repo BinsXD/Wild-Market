@@ -171,7 +171,7 @@ export default function ItemDetailPage() {
                 </Badge>
               </div>
               <p className="text-3xl font-bold text-primary mb-4">
-                ${item.price}
+                ₱{item.price}
                 {item.type === "rent" && <span className="text-lg font-normal text-muted-foreground">/day</span>}
               </p>
             </div>

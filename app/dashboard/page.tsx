@@ -156,7 +156,7 @@ export default function DashboardPage() {
           <Card>
             <CardHeader className="pb-3">
               <CardDescription>Total Revenue</CardDescription>
-              <CardTitle className="text-3xl">${stats.totalRevenue}</CardTitle>
+              <CardTitle className="text-3xl">₱{stats.totalRevenue}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -263,7 +263,7 @@ export default function DashboardPage() {
                   <CardContent>
                     <div className="flex items-center justify-between">
                       <span className="text-xl font-bold text-primary">
-                        ${item.price}
+                        ₱{item.price}
                         {item.type === "rent" && <span className="text-sm font-normal">/day</span>}
                       </span>
                       <Link href={`/item/${item.id}`}>
