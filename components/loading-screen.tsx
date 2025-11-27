@@ -1,24 +1,11 @@
 "use client"
 
-import { useEffect } from "react"
-import { useNavigation } from "next/navigation"
+import { useNavigationEvent } from "@/hooks/useNavigationEvent"
 
 export default function LoadingScreen() {
-  const navigation = useNavigation()
-  const isLoading = navigation.state === "loading"
+  const isNavigating = useNavigationEvent()
 
-  useEffect(() => {
-    // Prevent body scroll while loading overlay is visible
-    if (isLoading) {
-      const original = document.body.style.overflow
-      document.body.style.overflow = "hidden"
-      return () => {
-        document.body.style.overflow = original
-      }
-    }
-  }, [isLoading])
-
-  if (!isLoading) return null
+  if (!isNavigating) return null
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white/95 backdrop-blur-sm">
@@ -26,7 +13,7 @@ export default function LoadingScreen() {
         <img
           src="/Lion_rawr-removebg-preview%20bg%20removed.png"
           alt="Lion Rawr"
-          className="w-40 h-40 object-contain drop-shadow-lg"
+          className="w-40 h-40 object-contain drop-shadow-lg animate-bounce"
         />
         <div className="flex items-center gap-3">
           <svg
